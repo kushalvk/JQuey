@@ -127,4 +127,19 @@ $(document).ready(function () { // to ready a document
         $('#wiki').stop();
     })
 
+    // --------------------
+
+    // document/window methods
+
+    // $('#ta').val(); // for teking value
+    // $('#ta').val('setting it to kushal'); // to set a value
+    // $('#inp').val('setting it to kushal2'); // to set a value
+    // $('#wiki').empty(); // to blank the text 
+    // $('#wiki').text('you are good'); // to add a text
+    // $('#wiki').remove(); // to remove element
+    // $('#wiki').addClass('myclass'); // to add a new class in this tag
+    // $('#wiki').removeClass('myclass'); // to remove class 
+    // $('#wiki').css('background-color', 'gray'); // to add a css
+    // $('#wiki').css('background-color'); // to show a css proparty
+
 });
