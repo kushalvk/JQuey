@@ -7,7 +7,7 @@ $(document).ready(function () { // to ready a document
     // this is an exam pale of element selector
     // $('p').click(); // click on all the p element
     $('p').click(function () {
-        console.log(" You clicked on p", this);
+        // console.log(" You clicked on p", this);
         // $(this).hide(); // to hide the p tag when you click on p
         // $('#id').hide(); // to hide particular id
         // $('.class').hide(); // to hide particular class
@@ -33,4 +33,98 @@ $(document).ready(function () { // to ready a document
     // $('p:first').click(); // click on the first element of p
     // $('p:last').click(); // click on the last element of p
 
-})
+    // ------------------
+
+    // Events
+    // mouse events = click , bdlclick , mouseenter , mouseleave
+    // Keyboard Events = keypress , keydown , keyup
+    // form event = submit , change , focus , blur
+    // document/window events = load , resize , scroll , unload
+
+    $('p').dblclick(function () {
+        console.log(" You double clicked on p", this);
+    });
+
+    // $('p').mouseenter(function () {
+    //     console.log(" You entered: ", this);
+    // });
+
+    // $('p').mouseleave(function () {
+    //     console.log(" You leaved: ", this);
+    // });
+
+    // $('p').mousedown(function () { // any button click on mouse
+    //     console.log(" You parform mousedown event: ", this);
+    // });
+
+    // $('p').mouseup(function () {
+    //     console.log(" You click and up your mouse key:", this);
+    // });
+
+    // $('p').hover(function () {
+    //     console.log(" You hover on p:", this);
+    // });
+
+    // -----------------------
+
+    // demoing the on method
+    $('p').on(
+        {
+            click: function () {
+                console.log('Thanks for clicking', this);
+            },
+            // mouseleave: function () {
+            //     console.log('mouseleave');
+            // }
+
+        })
+
+    // $('#wiki').hide(1000, function () {
+    //     console.log("hidden");
+    // })
+    // $('#wiki').show(1000, function () {
+    //     console.log("show");
+    // })
+
+    // ------------------
+
+    // fade method -> speed and callback paramitarce are optional
+    $('#but').click(function () {
+        // $('#wiki').toggle(1000);
+        // $('#wiki').fadeOut(1000); // hide
+        // $('#wiki').fadeIn(1000); // show
+        $('#wiki').fadeToggle(1000, function () { // function is callback
+            console.log('fade done');
+        });
+        // $('#wiki').fadeTo(1000, 0.3); // blur to '0.3' densiti
+    })
+
+    // slide method -> speed and callback paramitarce are optional
+    $('#slide').click(function () {
+        // $('#wiki').slideUp(1000);
+        // $('#wiki').slideDown(1000);
+        $('#wiki').slideToggle(1000, function () { // function is callback
+            console.log('slide done');
+        });
+    })
+
+    // -----------------
+
+    // animat function in JQuery
+    $('.ani').click(function () {
+        $('#wiki').animate({
+            margin: '50px',
+            opacity: 0.5,
+            height: '150px',
+            width: '200px',
+        }, 2000)
+    })
+
+    // ----------------
+
+    // stop method
+    $('.stop').click(function () {
+        $('#wiki').stop();
+    })
+
+});
