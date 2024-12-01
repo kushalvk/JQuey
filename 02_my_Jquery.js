@@ -142,4 +142,5 @@ $(document).ready(function () { // to ready a document
     // $('#wiki').css('background-color', 'gray'); // to add a css
     // $('#wiki').css('background-color'); // to show a css proparty
 
+    // i am harshad
 });
